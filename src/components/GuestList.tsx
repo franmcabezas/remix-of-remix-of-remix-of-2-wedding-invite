@@ -10,7 +10,7 @@ const GuestList = ({ familyName, guests, maxGuests }: GuestListProps) => {
   return (
     <div className="text-center mb-10 animate-slide-up animate-delay-100">
       <h2 className="text-3xl md:text-4xl font-serif font-light text-foreground mb-2">
-        Familia {familyName}
+        {familyName}
       </h2>
       
       <p className="text-muted-foreground text-sm uppercase tracking-widest mb-8">

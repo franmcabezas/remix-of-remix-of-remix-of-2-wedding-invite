@@ -25,11 +25,11 @@ const Index = () => {
         </div>
         
         <h1 className="text-4xl md:text-5xl font-serif font-light text-foreground mb-4 italic">
-          María & Carlos
+          Fran & Belu
         </h1>
         
         <p className="text-lg font-serif text-gold mb-8">
-          15 de Junio, 2025
+          16 de Mayo, 2025
         </p>
         
         <p className="text-muted-foreground mb-8">

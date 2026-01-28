@@ -2,12 +2,19 @@ import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { supabase, Invitation } from '@/lib/supabase';
 import WeddingHeader from '@/components/WeddingHeader';
+import VideoPlayer from '@/components/VideoPlayer';
+import Countdown from '@/components/Countdown';
+import Timeline from '@/components/Timeline';
+import DressCode from '@/components/DressCode';
+import GiftsSection from '@/components/GiftsSection';
 import GuestList from '@/components/GuestList';
 import RSVPForm from '@/components/RSVPForm';
 import ThankYouMessage from '@/components/ThankYouMessage';
 import WeddingFooter from '@/components/WeddingFooter';
 import LoadingState from '@/components/LoadingState';
 import ErrorState from '@/components/ErrorState';
+
+const WEDDING_DATE = new Date('2025-05-16T17:00:00');
 
 const InvitationPage = () => {
   const [searchParams] = useSearchParams();
@@ -56,7 +63,6 @@ const InvitationPage = () => {
 
   const handleRSVPSuccess = () => {
     setHasResponded(true);
-    // Re-fetch to get updated data
     if (invitation) {
       setInvitation(prev => prev ? {
         ...prev,
@@ -83,7 +89,40 @@ const InvitationPage = () => {
       </div>
       
       <div className="relative container max-w-2xl mx-auto px-6 py-8">
+        {/* Video Player */}
+        <VideoPlayer 
+          principalSrc="/principal.mp4"
+          fiestaSrc="/fiesta.mp4"
+        />
+        
+        {/* Header with names, date, location */}
         <WeddingHeader />
+        
+        {/* Countdown */}
+        <Countdown targetDate={WEDDING_DATE} />
+        
+        {/* Divider */}
+        <div className="flex items-center justify-center gap-3 my-8">
+          <div className="h-px w-16 bg-gold-light" />
+          <span className="text-gold text-sm">✦</span>
+          <div className="h-px w-16 bg-gold-light" />
+        </div>
+        
+        {/* Timeline */}
+        <Timeline />
+        
+        {/* Dress Code */}
+        <DressCode />
+        
+        {/* Gifts */}
+        <GiftsSection />
+        
+        {/* Divider */}
+        <div className="flex items-center justify-center gap-3 my-8">
+          <div className="h-px w-16 bg-gold-light" />
+          <span className="text-gold text-sm">✦</span>
+          <div className="h-px w-16 bg-gold-light" />
+        </div>
         
         <main className="py-8">
           <GuestList 
