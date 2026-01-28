@@ -8,7 +8,7 @@ interface WeddingHeaderProps {
 }
 
 const WeddingHeader = ({
-  coupleName = "Fran & Belu",
+  coupleName = "Belu & Fran",
   weddingDate = "16 de Mayo, 2026",
   location = "Salta"
 }: WeddingHeaderProps) => {
