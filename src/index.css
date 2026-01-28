@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Quicksand:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -47,11 +50,12 @@
     --peach: 20 70% 85%;
     --blush: 350 45% 88%;
     --sage: 140 20% 60%;
-    
+
     /* Typography */
     --font-display: 'Playfair Display', Georgia, serif;
-    --font-serif: 'Cormorant', Georgia, serif;
-    --font-sans: 'Quicksand', system-ui, sans-serif;
+    --font-serif: "Libre Baskerville", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    --font-sans: Lato, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 
   .dark {
@@ -74,6 +78,9 @@
     --border: 25 15% 20%;
     --input: 25 15% 20%;
     --ring: 35 50% 60%;
+    --font-sans: Lato, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --font-serif: "Libre Baskerville", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   }
 }
 
@@ -106,7 +113,7 @@
   .font-serif {
     font-family: var(--font-serif);
   }
-  
+
   .font-sans {
     font-family: var(--font-sans);
   }
