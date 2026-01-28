@@ -88,7 +88,7 @@ const InvitationPage = () => {
         }} />
       </div>
       
-      <div className="relative container max-w-2xl mx-auto px-6 py-8">
+      <div className="relative container max-w-2xl mx-auto px-6 py-8 pb-24">
         {/* Video Player */}
         <VideoPlayer 
           principalSrc="/principal.m4a"
