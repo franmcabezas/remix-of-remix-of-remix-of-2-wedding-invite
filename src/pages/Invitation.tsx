@@ -85,37 +85,21 @@ const InvitationPage = () => {
     <div className="min-h-screen bg-background">
       {/* Fixed watercolor floral decorations - full width responsive */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        {/* Top decoration - spans full width */}
-        <div className="absolute top-0 left-0 right-0 flex justify-between">
-          <img 
-            src={watercolorTop} 
-            alt="" 
-            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg -mt-8 -ml-8 opacity-70 animate-float"
-            style={{ animationDelay: '0s' }}
-          />
-          <img 
-            src={watercolorTop} 
-            alt="" 
-            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg -mt-12 -mr-8 opacity-60 scale-x-[-1] animate-float"
-            style={{ animationDelay: '2s' }}
-          />
-        </div>
+        {/* Top decoration - single image, full width */}
+        <img 
+          src={watercolorTop} 
+          alt="" 
+          className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl opacity-70 animate-float"
+          style={{ animationDelay: '0s' }}
+        />
         
-        {/* Bottom decoration - spans full width */}
-        <div className="absolute bottom-0 left-0 right-0 flex justify-between">
-          <img 
-            src={watercolorBottom} 
-            alt="" 
-            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg -mb-8 -ml-8 opacity-60 animate-float"
-            style={{ animationDelay: '1s' }}
-          />
-          <img 
-            src={watercolorBottom} 
-            alt="" 
-            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg -mb-8 -mr-8 opacity-70 scale-x-[-1] animate-float"
-            style={{ animationDelay: '3s' }}
-          />
-        </div>
+        {/* Bottom decoration - single image, full width */}
+        <img 
+          src={watercolorBottom} 
+          alt="" 
+          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl opacity-70 animate-float"
+          style={{ animationDelay: '1.5s' }}
+        />
       </div>
       
       <div className="relative container max-w-2xl mx-auto px-6 py-8 pb-28">
