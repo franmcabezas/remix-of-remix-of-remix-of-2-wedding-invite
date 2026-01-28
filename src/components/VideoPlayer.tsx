@@ -60,10 +60,10 @@ const VideoPlayer = ({ principalSrc, fiestaSrc }: VideoPlayerProps) => {
       </audio>
 
       {/* Sticky controls at bottom */}
-      <div className="fixed bottom-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-t border-gold-light/30 py-3 px-4 animate-fade-in">
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-background/40 backdrop-blur-sm border-t border-gold-light/10 py-3 px-4 animate-fade-in">
         <div className="container max-w-2xl mx-auto flex items-center justify-center gap-4 flex-wrap">
           {/* Volume Controls */}
-          <div className="flex items-center gap-2 bg-background/50 rounded-full px-4 py-2 border border-gold-light/20">
+          <div className="flex items-center gap-2 bg-background/30 rounded-full px-4 py-2 border border-gold-light/10">
             <button
               onClick={toggleMute}
               className="text-gold hover:text-gold/80 transition-colors"
