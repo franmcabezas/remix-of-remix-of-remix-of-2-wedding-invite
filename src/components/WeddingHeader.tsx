@@ -10,7 +10,7 @@ interface WeddingHeaderProps {
 const WeddingHeader = ({
   coupleName = "Fran & Belu",
   weddingDate = "16 de Mayo, 2026",
-  location = "Jockey Club, Salta, Argentina"
+  location = "Salta"
 }: WeddingHeaderProps) => {
   return (
     <header className="text-center py-16 animate-fade-in">
