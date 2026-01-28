@@ -20,7 +20,7 @@ export default {
   				'serif'
   			],
   			serif: [
-  				'Libre Baskerville',
+  				'Crimson Pro',
   				'ui-serif',
   				'Georgia',
   				'Cambria',
@@ -29,7 +29,7 @@ export default {
   				'serif'
   			],
   			sans: [
-  				'Lato',
+  				'Open Sans',
   				'ui-sans-serif',
   				'system-ui',
   				'sans-serif',
@@ -39,7 +39,7 @@ export default {
   				'Noto Color Emoji'
   			],
   			mono: [
-  				'IBM Plex Mono',
+  				'Cascadia Code',
   				'ui-monospace',
   				'SFMono-Regular',
   				'Menlo',
