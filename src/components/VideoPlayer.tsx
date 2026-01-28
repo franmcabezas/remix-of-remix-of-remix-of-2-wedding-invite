@@ -47,62 +47,62 @@ const VideoPlayer = ({ principalSrc, fiestaSrc }: VideoPlayerProps) => {
   };
 
   return (
-    <div className="relative w-full mb-8 animate-fade-in">
-      <div className="relative rounded-lg overflow-hidden shadow-lg">
-        <audio
-          ref={videoRef as React.RefObject<HTMLAudioElement>}
-          className="w-full"
-          autoPlay
-          loop
-          muted={isMuted}
-          controls={false}
-        >
-          <source src={isFiestaMode ? fiestaSrc : principalSrc} type="audio/mp4" />
-          Tu navegador no soporta audio.
-        </audio>
-      </div>
+    <>
+      {/* Hidden audio element */}
+      <audio
+        ref={videoRef as React.RefObject<HTMLAudioElement>}
+        autoPlay
+        loop
+        muted={isMuted}
+        className="hidden"
+      >
+        <source src={isFiestaMode ? fiestaSrc : principalSrc} type="audio/mp4" />
+      </audio>
 
-      <div className="flex items-center justify-center gap-4 mt-4 flex-wrap">
-        {/* Volume Controls */}
-        <div className="flex items-center gap-2 bg-card/80 backdrop-blur-sm rounded-full px-4 py-2 border border-gold-light/30">
-          <button
-            onClick={toggleMute}
-            className="text-gold hover:text-gold/80 transition-colors"
-            aria-label={isMuted ? 'Activar sonido' : 'Silenciar'}
+      {/* Sticky controls at bottom */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md border-t border-gold-light/30 py-3 px-4 animate-fade-in">
+        <div className="container max-w-2xl mx-auto flex items-center justify-center gap-4 flex-wrap">
+          {/* Volume Controls */}
+          <div className="flex items-center gap-2 bg-background/50 rounded-full px-4 py-2 border border-gold-light/20">
+            <button
+              onClick={toggleMute}
+              className="text-gold hover:text-gold/80 transition-colors"
+              aria-label={isMuted ? 'Activar sonido' : 'Silenciar'}
+            >
+              {isMuted ? (
+                <VolumeX className="w-5 h-5" />
+              ) : (
+                <Volume2 className="w-5 h-5" />
+              )}
+            </button>
+            
+            <Slider
+              value={[isMuted ? 0 : volume]}
+              onValueChange={handleVolumeChange}
+              max={1}
+              step={0.1}
+              className="w-24"
+            />
+          </div>
+
+          {/* Fiesta Button */}
+          <Button
+            onClick={toggleFiesta}
+            variant={isFiestaMode ? "default" : "outline"}
+            className={`
+              font-sans uppercase tracking-wider text-sm
+              ${isFiestaMode 
+                ? 'bg-gold hover:bg-gold/90 text-primary-foreground' 
+                : 'border-gold text-gold hover:bg-gold/10'
+              }
+            `}
           >
-            {isMuted ? (
-              <VolumeX className="w-5 h-5" />
-            ) : (
-              <Volume2 className="w-5 h-5" />
-            )}
-          </button>
-          
-          <Slider
-            value={[isMuted ? 0 : volume]}
-            onValueChange={handleVolumeChange}
-            max={1}
-            step={0.1}
-            className="w-24"
-          />
+            <PartyPopper className="w-4 h-4 mr-2" />
+            {isFiestaMode ? '¡FIESTA! 🥳' : 'FIESTA 🥳'}
+          </Button>
         </div>
-
-        {/* Fiesta Button */}
-        <Button
-          onClick={toggleFiesta}
-          variant={isFiestaMode ? "default" : "outline"}
-          className={`
-            font-sans uppercase tracking-wider text-sm
-            ${isFiestaMode 
-              ? 'bg-gold hover:bg-gold/90 text-primary-foreground' 
-              : 'border-gold text-gold hover:bg-gold/10'
-            }
-          `}
-        >
-          <PartyPopper className="w-4 h-4 mr-2" />
-          {isFiestaMode ? '¡FIESTA! 🥳' : 'FIESTA 🥳'}
-        </Button>
       </div>
-    </div>
+    </>
   );
 };
 
