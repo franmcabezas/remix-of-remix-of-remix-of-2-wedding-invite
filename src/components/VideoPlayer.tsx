@@ -49,17 +49,17 @@ const VideoPlayer = ({ principalSrc, fiestaSrc }: VideoPlayerProps) => {
   return (
     <div className="relative w-full mb-8 animate-fade-in">
       <div className="relative rounded-lg overflow-hidden shadow-lg">
-        <video
-          ref={videoRef}
-          className="w-full h-auto max-h-[400px] object-cover"
+        <audio
+          ref={videoRef as React.RefObject<HTMLAudioElement>}
+          className="w-full"
           autoPlay
           loop
-          playsInline
           muted={isMuted}
+          controls={false}
         >
-          <source src={isFiestaMode ? fiestaSrc : principalSrc} type="video/mp4" />
-          Tu navegador no soporta videos.
-        </video>
+          <source src={isFiestaMode ? fiestaSrc : principalSrc} type="audio/mp4" />
+          Tu navegador no soporta audio.
+        </audio>
       </div>
 
       <div className="flex items-center justify-center gap-4 mt-4 flex-wrap">

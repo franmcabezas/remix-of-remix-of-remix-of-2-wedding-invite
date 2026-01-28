@@ -91,8 +91,8 @@ const InvitationPage = () => {
       <div className="relative container max-w-2xl mx-auto px-6 py-8">
         {/* Video Player */}
         <VideoPlayer 
-          principalSrc="/principal.mp4"
-          fiestaSrc="/fiesta.mp4"
+          principalSrc="/principal.m4a"
+          fiestaSrc="/fiesta.m4a"
         />
         
         {/* Header with names, date, location */}
