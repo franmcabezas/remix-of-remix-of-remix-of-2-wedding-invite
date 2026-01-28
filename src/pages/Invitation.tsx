@@ -83,35 +83,39 @@ const InvitationPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Fixed watercolor floral decorations */}
+      {/* Fixed watercolor floral decorations - full width responsive */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        {/* Top decoration */}
-        <img 
-          src={watercolorTop} 
-          alt="" 
-          className="absolute -top-10 -left-10 w-80 md:w-96 opacity-70 animate-float"
-          style={{ animationDelay: '0s' }}
-        />
-        <img 
-          src={watercolorTop} 
-          alt="" 
-          className="absolute -top-16 -right-20 w-72 md:w-80 opacity-60 scale-x-[-1] animate-float"
-          style={{ animationDelay: '2s' }}
-        />
+        {/* Top decoration - spans full width */}
+        <div className="absolute top-0 left-0 right-0 flex justify-between">
+          <img 
+            src={watercolorTop} 
+            alt="" 
+            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg -mt-8 -ml-8 opacity-70 animate-float"
+            style={{ animationDelay: '0s' }}
+          />
+          <img 
+            src={watercolorTop} 
+            alt="" 
+            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg -mt-12 -mr-8 opacity-60 scale-x-[-1] animate-float"
+            style={{ animationDelay: '2s' }}
+          />
+        </div>
         
-        {/* Bottom decoration */}
-        <img 
-          src={watercolorBottom} 
-          alt="" 
-          className="absolute -bottom-10 -left-16 w-72 md:w-80 opacity-60 animate-float"
-          style={{ animationDelay: '1s' }}
-        />
-        <img 
-          src={watercolorBottom} 
-          alt="" 
-          className="absolute -bottom-10 -right-10 w-80 md:w-96 opacity-70 scale-x-[-1] animate-float"
-          style={{ animationDelay: '3s' }}
-        />
+        {/* Bottom decoration - spans full width */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-between">
+          <img 
+            src={watercolorBottom} 
+            alt="" 
+            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg -mb-8 -ml-8 opacity-60 animate-float"
+            style={{ animationDelay: '1s' }}
+          />
+          <img 
+            src={watercolorBottom} 
+            alt="" 
+            className="w-1/2 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg -mb-8 -mr-8 opacity-70 scale-x-[-1] animate-float"
+            style={{ animationDelay: '3s' }}
+          />
+        </div>
       </div>
       
       <div className="relative container max-w-2xl mx-auto px-6 py-8 pb-28">
