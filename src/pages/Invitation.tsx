@@ -14,7 +14,7 @@ import WeddingFooter from '@/components/WeddingFooter';
 import LoadingState from '@/components/LoadingState';
 import ErrorState from '@/components/ErrorState';
 
-const WEDDING_DATE = new Date('2025-05-16T17:00:00');
+const WEDDING_DATE = new Date('2026-05-16T17:00:00');
 
 const InvitationPage = () => {
   const [searchParams] = useSearchParams();
@@ -81,11 +81,54 @@ const InvitationPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Decorative background pattern */}
-      <div className="fixed inset-0 opacity-[0.02] pointer-events-none">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
+      {/* Fixed floral decorations - apricot/peach tones */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
+        {/* Top left flower cluster */}
+        <svg className="absolute -top-10 -left-10 w-64 h-64 opacity-20" viewBox="0 0 200 200" fill="none">
+          <circle cx="60" cy="60" r="25" fill="#FFCBA4" />
+          <circle cx="45" cy="50" r="18" fill="#FFB88C" />
+          <circle cx="75" cy="45" r="20" fill="#FFDAB9" />
+          <circle cx="55" cy="75" r="15" fill="#FFD4A3" />
+          <circle cx="80" cy="70" r="22" fill="#FFCBA4" />
+          <circle cx="40" cy="80" r="12" fill="#FFB88C" />
+          <circle cx="90" cy="55" r="16" fill="#FFDAB9" />
+        </svg>
+        
+        {/* Top right flower */}
+        <svg className="absolute -top-5 -right-16 w-56 h-56 opacity-15" viewBox="0 0 200 200" fill="none">
+          <ellipse cx="100" cy="80" rx="35" ry="30" fill="#FFDAB9" />
+          <ellipse cx="80" cy="100" rx="28" ry="25" fill="#FFB88C" />
+          <ellipse cx="120" cy="95" rx="30" ry="28" fill="#FFCBA4" />
+          <ellipse cx="95" cy="115" rx="22" ry="20" fill="#FFD4A3" />
+        </svg>
+        
+        {/* Bottom left flower */}
+        <svg className="absolute bottom-32 -left-12 w-48 h-48 opacity-15" viewBox="0 0 200 200" fill="none">
+          <circle cx="80" cy="100" r="30" fill="#FFCBA4" />
+          <circle cx="60" cy="85" r="22" fill="#FFB88C" />
+          <circle cx="100" cy="80" r="25" fill="#FFDAB9" />
+          <circle cx="70" cy="120" r="18" fill="#FFD4A3" />
+        </svg>
+        
+        {/* Bottom right flower cluster */}
+        <svg className="absolute bottom-40 -right-8 w-52 h-52 opacity-20" viewBox="0 0 200 200" fill="none">
+          <circle cx="100" cy="100" r="28" fill="#FFDAB9" />
+          <circle cx="80" cy="90" r="20" fill="#FFCBA4" />
+          <circle cx="120" cy="85" r="24" fill="#FFB88C" />
+          <circle cx="90" cy="120" r="16" fill="#FFD4A3" />
+          <circle cx="115" cy="115" r="18" fill="#FFCBA4" />
+        </svg>
+        
+        {/* Small accent petals scattered */}
+        <svg className="absolute top-1/3 -left-4 w-24 h-24 opacity-10" viewBox="0 0 100 100" fill="none">
+          <ellipse cx="50" cy="50" rx="20" ry="35" fill="#FFB88C" transform="rotate(-30 50 50)" />
+          <ellipse cx="50" cy="50" rx="20" ry="35" fill="#FFDAB9" transform="rotate(30 50 50)" />
+        </svg>
+        
+        <svg className="absolute top-1/2 -right-6 w-28 h-28 opacity-10" viewBox="0 0 100 100" fill="none">
+          <ellipse cx="50" cy="50" rx="18" ry="32" fill="#FFCBA4" transform="rotate(15 50 50)" />
+          <ellipse cx="50" cy="50" rx="18" ry="32" fill="#FFD4A3" transform="rotate(-45 50 50)" />
+        </svg>
       </div>
       
       <div className="relative container max-w-2xl mx-auto px-6 py-8 pb-24">
