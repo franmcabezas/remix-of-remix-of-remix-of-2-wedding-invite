@@ -13,8 +13,7 @@ import ThankYouMessage from '@/components/ThankYouMessage';
 import WeddingFooter from '@/components/WeddingFooter';
 import LoadingState from '@/components/LoadingState';
 import ErrorState from '@/components/ErrorState';
-import watercolorTop from '@/assets/watercolor-flowers-top.png';
-import watercolorBottom from '@/assets/watercolor-flowers-bottom.png';
+import FloralDecoration from '@/components/FloralDecoration';
 
 const WEDDING_DATE = new Date('2026-05-16T17:00:00');
 
@@ -83,24 +82,8 @@ const InvitationPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Fixed watercolor floral decorations - full width responsive */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-        {/* Top decoration - single image, full width */}
-        <img 
-          src={watercolorTop} 
-          alt="" 
-          className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl opacity-70 animate-float"
-          style={{ animationDelay: '0s' }}
-        />
-        
-        {/* Bottom decoration - single image, full width */}
-        <img 
-          src={watercolorBottom} 
-          alt="" 
-          className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-3xl opacity-70 animate-float"
-          style={{ animationDelay: '1.5s' }}
-        />
-      </div>
+      {/* CSS-only floral decorations */}
+      <FloralDecoration />
       
       <div className="relative container max-w-2xl mx-auto px-6 py-8 pb-28">
         {/* Video Player */}
