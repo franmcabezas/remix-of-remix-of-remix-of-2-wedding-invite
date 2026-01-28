@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { Heart } from 'lucide-react';
 import { supabase, Invitation } from '@/lib/supabase';
 import WeddingHeader from '@/components/WeddingHeader';
 import VideoPlayer from '@/components/VideoPlayer';
@@ -99,10 +100,10 @@ const InvitationPage = () => {
         <Countdown targetDate={WEDDING_DATE} />
         
         {/* Elegant divider */}
-        <div className="flex items-center justify-center gap-4 my-10">
-          <div className="h-px w-16 bg-gradient-to-r from-transparent to-gold-light/60" />
-          <span className="text-gold text-sm font-serif">✿</span>
-          <div className="h-px w-16 bg-gradient-to-l from-transparent to-gold-light/60" />
+        <div className="flex items-center justify-center gap-3 my-10">
+          <div className="h-px w-12 bg-gold-light" />
+          <Heart className="w-4 h-4 text-gold fill-gold/20" />
+          <div className="h-px w-12 bg-gold-light" />
         </div>
         
         {/* Timeline */}
@@ -115,10 +116,10 @@ const InvitationPage = () => {
         <GiftsSection />
         
         {/* Elegant divider */}
-        <div className="flex items-center justify-center gap-4 my-10">
-          <div className="h-px w-16 bg-gradient-to-r from-transparent to-gold-light/60" />
-          <span className="text-gold text-sm font-serif">✿</span>
-          <div className="h-px w-16 bg-gradient-to-l from-transparent to-gold-light/60" />
+        <div className="flex items-center justify-center gap-3 my-10">
+          <div className="h-px w-12 bg-gold-light" />
+          <Heart className="w-4 h-4 text-gold fill-gold/20" />
+          <div className="h-px w-12 bg-gold-light" />
         </div>
         
         <main className="py-8">
