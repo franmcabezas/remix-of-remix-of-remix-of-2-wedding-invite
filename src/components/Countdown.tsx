@@ -37,25 +37,29 @@ const Countdown = ({ targetDate }: CountdownProps) => {
   const timeUnits = [
     { value: timeLeft.days, label: 'Días' },
     { value: timeLeft.hours, label: 'Horas' },
-    { value: timeLeft.minutes, label: 'Minutos' },
-    { value: timeLeft.seconds, label: 'Segundos' },
+    { value: timeLeft.minutes, label: 'Min' },
+    { value: timeLeft.seconds, label: 'Seg' },
   ];
 
   return (
-    <div className="text-center py-8 animate-fade-in">
-      <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6 font-sans">
-        Cuenta regresiva
+    <div className="text-center py-10 animate-fade-in">
+      <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground mb-8 font-sans font-medium">
+        Cuenta Regresiva
       </p>
       
-      <div className="flex justify-center gap-4 md:gap-6">
+      <div className="flex justify-center gap-3 md:gap-5">
         {timeUnits.map((unit, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="bg-card/80 backdrop-blur-sm border border-gold-light/30 rounded-lg w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
-              <span className="text-2xl md:text-3xl font-serif text-foreground">
-                {String(unit.value).padStart(2, '0')}
-              </span>
+            <div className="relative">
+              {/* Watercolor-style background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-peach/30 via-blush/20 to-transparent rounded-2xl blur-sm" />
+              <div className="relative bg-card/60 backdrop-blur-sm border border-gold-light/20 rounded-2xl w-16 h-20 md:w-20 md:h-24 flex flex-col items-center justify-center shadow-sm">
+                <span className="text-3xl md:text-4xl font-display text-foreground leading-none">
+                  {String(unit.value).padStart(2, '0')}
+                </span>
+              </div>
             </div>
-            <span className="text-xs text-muted-foreground mt-2 uppercase tracking-wider">
+            <span className="text-[10px] text-muted-foreground mt-3 uppercase tracking-[0.2em] font-sans">
               {unit.label}
             </span>
           </div>

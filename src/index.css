@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Quicksand:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,70 +6,74 @@
 
 @layer base {
   :root {
-    /* Wedding elegant palette - warm cream and gold */
-    --background: 35 50% 98%;
-    --foreground: 30 10% 20%;
+    /* Elegant watercolor wedding palette */
+    --background: 30 40% 98%;
+    --foreground: 25 15% 25%;
 
-    --card: 35 40% 96%;
-    --card-foreground: 30 10% 20%;
+    --card: 30 35% 97%;
+    --card-foreground: 25 15% 25%;
 
-    --popover: 35 40% 96%;
-    --popover-foreground: 30 10% 20%;
+    --popover: 30 35% 97%;
+    --popover-foreground: 25 15% 25%;
 
-    --primary: 38 35% 45%;
-    --primary-foreground: 35 50% 98%;
+    --primary: 25 45% 55%;
+    --primary-foreground: 30 40% 98%;
 
-    --secondary: 85 15% 50%;
-    --secondary-foreground: 35 50% 98%;
+    --secondary: 150 20% 45%;
+    --secondary-foreground: 30 40% 98%;
 
-    --muted: 35 20% 90%;
-    --muted-foreground: 30 10% 45%;
+    --muted: 30 25% 92%;
+    --muted-foreground: 25 10% 50%;
 
-    --accent: 38 50% 75%;
-    --accent-foreground: 30 10% 20%;
+    --accent: 15 60% 80%;
+    --accent-foreground: 25 15% 25%;
 
     --destructive: 0 60% 50%;
-    --destructive-foreground: 35 50% 98%;
+    --destructive-foreground: 30 40% 98%;
 
-    --border: 35 20% 85%;
-    --input: 35 20% 85%;
-    --ring: 38 35% 45%;
+    --border: 30 25% 88%;
+    --input: 30 25% 88%;
+    --ring: 25 45% 55%;
 
-    --radius: 0.25rem;
+    --radius: 0.5rem;
 
-    /* Custom wedding tokens */
-    --gold: 38 50% 55%;
-    --gold-light: 38 45% 75%;
-    --cream: 35 50% 96%;
-    --cream-dark: 35 30% 90%;
-    --olive: 85 20% 35%;
-    --olive-light: 85 15% 50%;
+    /* Custom watercolor wedding tokens */
+    --gold: 35 55% 50%;
+    --gold-light: 35 50% 70%;
+    --cream: 35 45% 96%;
+    --cream-dark: 30 30% 92%;
+    --olive: 150 25% 35%;
+    --olive-light: 150 20% 50%;
+    --peach: 20 70% 85%;
+    --blush: 350 45% 88%;
+    --sage: 140 20% 60%;
     
     /* Typography */
-    --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'Montserrat', system-ui, sans-serif;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-serif: 'Cormorant', Georgia, serif;
+    --font-sans: 'Quicksand', system-ui, sans-serif;
   }
 
   .dark {
-    --background: 30 10% 10%;
-    --foreground: 35 30% 90%;
-    --card: 30 10% 12%;
-    --card-foreground: 35 30% 90%;
-    --popover: 30 10% 12%;
-    --popover-foreground: 35 30% 90%;
-    --primary: 38 45% 60%;
-    --primary-foreground: 30 10% 10%;
-    --secondary: 85 15% 40%;
-    --secondary-foreground: 35 30% 90%;
-    --muted: 30 10% 20%;
-    --muted-foreground: 35 20% 60%;
-    --accent: 38 40% 50%;
-    --accent-foreground: 35 30% 90%;
+    --background: 25 15% 10%;
+    --foreground: 30 30% 90%;
+    --card: 25 15% 12%;
+    --card-foreground: 30 30% 90%;
+    --popover: 25 15% 12%;
+    --popover-foreground: 30 30% 90%;
+    --primary: 35 50% 60%;
+    --primary-foreground: 25 15% 10%;
+    --secondary: 150 20% 40%;
+    --secondary-foreground: 30 30% 90%;
+    --muted: 25 15% 20%;
+    --muted-foreground: 30 20% 60%;
+    --accent: 15 50% 45%;
+    --accent-foreground: 30 30% 90%;
     --destructive: 0 50% 40%;
-    --destructive-foreground: 35 30% 90%;
-    --border: 30 10% 20%;
-    --input: 30 10% 20%;
-    --ring: 38 45% 60%;
+    --destructive-foreground: 30 30% 90%;
+    --border: 25 15% 20%;
+    --input: 25 15% 20%;
+    --ring: 35 50% 60%;
   }
 }
 
@@ -81,14 +85,24 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
+    letter-spacing: 0.02em;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0.03em;
+  }
+
+  h4, h5, h6 {
     font-family: var(--font-serif);
   }
 }
 
 @layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
   .font-serif {
     font-family: var(--font-serif);
   }
@@ -105,20 +119,53 @@
     color: hsl(var(--olive));
   }
 
+  .text-peach {
+    color: hsl(var(--peach));
+  }
+
+  .text-sage {
+    color: hsl(var(--sage));
+  }
+
   .bg-cream {
     background-color: hsl(var(--cream));
+  }
+
+  .bg-peach {
+    background-color: hsl(var(--peach));
+  }
+
+  .bg-blush {
+    background-color: hsl(var(--blush));
   }
 
   .border-gold {
     border-color: hsl(var(--gold-light));
   }
 
+  /* Watercolor text effect */
+  .watercolor-text {
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gold)) 0%,
+      hsl(25 50% 60%) 50%,
+      hsl(var(--gold)) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
   .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
+    animation: fadeIn 1s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
   }
 
   .animate-delay-100 {
@@ -150,10 +197,19 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }
