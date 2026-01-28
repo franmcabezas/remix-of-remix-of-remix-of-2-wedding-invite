@@ -41,7 +41,7 @@
     --input: 30 25% 88%;
     --ring: 25 45% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.875rem;
 
     /* Custom watercolor wedding tokens */
     --gold: 35 55% 50%;
@@ -84,6 +84,7 @@
     --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     --font-serif: "Crimson Pro", ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
     --font-mono: "Cascadia Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+    --radius: 0.875rem;
   }
 }
 
