@@ -6,38 +6,52 @@ interface WeddingHeaderProps {
   weddingDate?: string;
   location?: string;
 }
+
 const WeddingHeader = ({
   coupleName = "Fran & Belu",
-  weddingDate = "16 de Mayo, 2025",
+  weddingDate = "16 de Mayo, 2026",
   location = "Jockey Club, Salta, Argentina"
 }: WeddingHeaderProps) => {
-  return <header className="text-center py-12 animate-fade-in">
-      <div className="flex items-center justify-center gap-3 mb-6">
-        <div className="h-px w-16 bg-gold-light" />
-        <Heart className="w-5 h-5 text-gold fill-gold/20" />
-        <div className="h-px w-16 bg-gold-light" />
+  return (
+    <header className="text-center py-16 animate-fade-in">
+      {/* Decorative flourish */}
+      <div className="flex items-center justify-center gap-4 mb-8">
+        <div className="h-px w-20 bg-gradient-to-r from-transparent to-gold-light" />
+        <Heart className="w-4 h-4 text-gold fill-gold/30" />
+        <div className="h-px w-20 bg-gradient-to-l from-transparent to-gold-light" />
       </div>
       
-      <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4 font-sans">¡NOS CASAMOS!</p>
+      <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground mb-6 font-sans font-medium">
+        ¡Nos Casamos!
+      </p>
       
-      <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-light text-foreground mb-6 italic">
-        {coupleName}
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-normal text-foreground mb-8 leading-tight">
+        <span className="block italic text-gold">{coupleName.split(' & ')[0]}</span>
+        <span className="text-3xl md:text-4xl text-muted-foreground font-serif font-light my-2 block">&</span>
+        <span className="block italic text-gold">{coupleName.split(' & ')[1]}</span>
       </h1>
       
-      <p className="text-lg font-serif text-gold tracking-wide mb-4">
+      <div className="flex items-center justify-center gap-3 mb-4">
+        <div className="h-px w-12 bg-gold-light/50" />
+        <span className="text-gold text-lg">❧</span>
+        <div className="h-px w-12 bg-gold-light/50" />
+      </div>
+      
+      <p className="text-xl md:text-2xl font-serif text-foreground tracking-wide mb-4 font-light">
         {weddingDate}
       </p>
       
-      <div className="flex items-center justify-center gap-2 text-muted-foreground">
-        <MapPin className="w-4 h-4" />
-        <span className="text-sm font-sans">{location}</span>
+      <div className="flex items-center justify-center gap-2 text-muted-foreground mt-6">
+        <MapPin className="w-4 h-4 text-sage" />
+        <span className="text-sm font-sans tracking-wide">{location}</span>
       </div>
       
-      <div className="flex items-center justify-center gap-3 mt-8">
-        <div className="h-px w-24 bg-gold-light" />
-        <span className="text-gold text-xl">✦</span>
-        <div className="h-px w-24 bg-gold-light" />
+      {/* Bottom flourish */}
+      <div className="flex items-center justify-center gap-4 mt-10">
+        <div className="h-px w-28 bg-gradient-to-r from-transparent via-gold-light to-transparent" />
       </div>
-    </header>;
+    </header>
+  );
 };
+
 export default WeddingHeader;

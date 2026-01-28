@@ -2,24 +2,29 @@ import { Shirt } from 'lucide-react';
 
 const DressCode = () => {
   return (
-    <div className="py-8 text-center animate-fade-in">
-      <div className="flex items-center justify-center gap-3 mb-4">
+    <div className="py-10 text-center animate-fade-in">
+      <div className="flex items-center justify-center gap-3 mb-6">
         <Shirt className="w-5 h-5 text-gold" />
-        <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground font-sans">
+        <p className="text-xs uppercase tracking-[0.4em] text-muted-foreground font-sans font-medium">
           Código de Vestimenta
         </p>
       </div>
       
-      <div className="bg-card/50 backdrop-blur-sm rounded-lg p-6 border border-gold-light/30 max-w-md mx-auto">
-        <h3 className="font-serif text-2xl text-foreground mb-4">Formal</h3>
+      <div className="relative max-w-md mx-auto">
+        {/* Watercolor background effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-peach/20 via-transparent to-blush/20 rounded-2xl blur-md" />
         
-        <div className="space-y-2 text-muted-foreground">
-          <p className="text-sm">
-            Por favor, evitar prendas de color <span className="font-medium text-foreground">blanco</span>
-          </p>
-          <p className="text-sm">
-            y trajes completamente <span className="font-medium text-foreground">azules</span>
-          </p>
+        <div className="relative bg-card/40 backdrop-blur-sm rounded-2xl p-8 border border-gold-light/20 shadow-sm">
+          <h3 className="font-display text-3xl text-foreground mb-5 italic">Formal</h3>
+          
+          <div className="space-y-3 text-muted-foreground">
+            <p className="text-sm font-sans leading-relaxed">
+              Por favor, evitar prendas de color <span className="font-medium text-foreground">blanco</span>
+            </p>
+            <p className="text-sm font-sans leading-relaxed">
+              y trajes completamente <span className="font-medium text-foreground">azules</span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
