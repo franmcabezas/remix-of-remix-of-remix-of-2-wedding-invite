@@ -14,9 +14,9 @@ const WeddingFooter = () => {
       </p>
       
       <div className="flex items-center justify-center gap-2 mt-8">
-        <span className="text-gold/60 text-xs">❧</span>
-        <span className="text-gold/60 text-xs">❧</span>
-        <span className="text-gold/60 text-xs">❧</span>
+        <Heart className="w-3 h-3 text-gold/60 fill-gold/20" />
+        <Heart className="w-3 h-3 text-gold/60 fill-gold/20" />
+        <Heart className="w-3 h-3 text-gold/60 fill-gold/20" />
       </div>
     </footer>
   );
