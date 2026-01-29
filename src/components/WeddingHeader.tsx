@@ -1,19 +1,16 @@
 import { Heart } from 'lucide-react';
 import { MapPin } from 'lucide-react';
-
 interface WeddingHeaderProps {
   coupleName?: string;
   weddingDate?: string;
   location?: string;
 }
-
 const WeddingHeader = ({
   coupleName = "Belu & Fran",
   weddingDate = "16 de Mayo, 2026",
   location = "Salta"
 }: WeddingHeaderProps) => {
-  return (
-    <header className="text-center py-16 animate-fade-in">
+  return <header className="text-center py-16 animate-fade-in">
       {/* Decorative flourish */}
       <div className="flex items-center justify-center gap-4 mb-8">
         <div className="h-px w-20 bg-gradient-to-r from-transparent to-gold-light" />
@@ -42,7 +39,7 @@ const WeddingHeader = ({
       </p>
       
       <div className="flex items-center justify-center gap-2 text-muted-foreground mt-6">
-        <MapPin className="w-4 h-4 text-sage" />
+        
         <span className="text-sm font-sans tracking-wide">{location}</span>
       </div>
       
@@ -50,8 +47,6 @@ const WeddingHeader = ({
       <div className="flex items-center justify-center gap-4 mt-10">
         <div className="h-px w-28 bg-gradient-to-r from-transparent via-gold-light to-transparent" />
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default WeddingHeader;
