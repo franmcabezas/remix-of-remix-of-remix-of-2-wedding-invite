@@ -32,9 +32,9 @@ const WeddingHeader = ({
       </h1>
       
       <div className="flex items-center justify-center gap-3 mb-4">
-        <div className="h-px w-12 bg-gold-light/50" />
-        <span className="text-gold text-lg">❧</span>
-        <div className="h-px w-12 bg-gold-light/50" />
+        <div className="h-px w-12 bg-gold-light" />
+        <Heart className="w-4 h-4 text-gold fill-gold/20" />
+        <div className="h-px w-12 bg-gold-light" />
       </div>
       
       <p className="text-xl md:text-2xl font-serif text-foreground tracking-wide mb-4 font-light">
