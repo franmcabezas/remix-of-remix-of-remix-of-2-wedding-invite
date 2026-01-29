@@ -68,11 +68,7 @@ const ThankYouMessage = ({ confirmedGuests, familyName }: ThankYouMessageProps) 
         {isAttending ? (
           <>
             <p className="text-muted-foreground mb-6">
-              Hemos recibido tu confirmación. 
-              {confirmedGuests === 1 
-                ? ' Te esperamos con mucha ilusión.'
-                : ` Les esperamos con mucha ilusión a los ${confirmedGuests}.`
-              }
+              Los esperamos con mucha ilusión.
             </p>
             
             <div className="flex items-center justify-center gap-2 text-gold">
