@@ -50,18 +50,22 @@ const Countdown = ({ targetDate }: CountdownProps) => {
       <div className="flex justify-center gap-3 md:gap-5">
         {timeUnits.map((unit, index) => (
           <div key={index} className="flex flex-col items-center">
-            <div className="relative">
-              {/* Watercolor-style background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-peach/30 via-blush/20 to-transparent rounded-2xl blur-sm" />
-              <div className="relative bg-card/60 backdrop-blur-sm border border-gold-light/20 rounded-2xl w-16 h-20 md:w-20 md:h-24 flex flex-col items-center justify-center shadow-sm">
-                <span className="text-3xl md:text-4xl font-display text-foreground leading-none">
+            <div className="relative w-16 h-20 md:w-20 md:h-24">
+              {/* wash acuarela */}
+              <div className="absolute -inset-2 rounded-[24px] bg-gradient-to-br from-peach/50 via-gold-light/30 to-transparent blur-md" />
+              {/* "papel" */}
+              <div className="absolute inset-0 rounded-2xl bg-card/60 backdrop-blur border border-card/40 shadow-sm" />
+              {/* borde orgánico suave */}
+              <div className="absolute inset-0 rounded-2xl ring-1 ring-peach/30" />
+              <div className="relative h-full flex flex-col items-center justify-center">
+                <span className="text-3xl md:text-4xl font-serif text-foreground leading-none">
                   {String(unit.value).padStart(2, '0')}
+                </span>
+                <span className="mt-2 text-[10px] md:text-xs tracking-[0.18em] text-muted-foreground">
+                  {unit.label}
                 </span>
               </div>
             </div>
-            <span className="text-[10px] text-muted-foreground mt-3 uppercase tracking-[0.2em] font-sans">
-              {unit.label}
-            </span>
           </div>
         ))}
       </div>
