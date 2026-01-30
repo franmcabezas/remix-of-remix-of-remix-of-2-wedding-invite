@@ -1,16 +1,22 @@
 import { Heart } from 'lucide-react';
-import { MapPin } from 'lucide-react';
+import floralBackground from '@/assets/floral-background.png';
+
 interface WeddingHeaderProps {
   coupleName?: string;
   weddingDate?: string;
   location?: string;
 }
+
 const WeddingHeader = ({
   coupleName = "Belu & Fran",
   weddingDate = "16 de Mayo, 2026",
   location = "Salta"
 }: WeddingHeaderProps) => {
-  return <header className="text-center py-16 animate-fade-in">
+  return (
+    <header 
+      className="text-center py-16 animate-fade-in relative bg-cover bg-center bg-no-repeat rounded-2xl"
+      style={{ backgroundImage: `url(${floralBackground})` }}
+    >
       {/* Decorative flourish */}
       <div className="flex items-center justify-center gap-4 mb-8">
         <div className="h-px w-20 bg-gradient-to-r from-transparent to-gold-light" />
@@ -47,6 +53,7 @@ const WeddingHeader = ({
       <div className="flex items-center justify-center gap-4 mt-10">
         <div className="h-px w-28 bg-gradient-to-r from-transparent via-gold-light to-transparent" />
       </div>
-    </header>;
+    </header>
+  );
 };
 export default WeddingHeader;
