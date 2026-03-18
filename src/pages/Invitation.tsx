@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Heart } from 'lucide-react';
+import EnvelopeOpener from '@/components/EnvelopeOpener';
 import { supabase, Invitation } from '@/lib/supabase';
 import WeddingHeader from '@/components/WeddingHeader';
 import VideoPlayer from '@/components/VideoPlayer';
