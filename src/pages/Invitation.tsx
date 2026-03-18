@@ -27,6 +27,7 @@ const InvitationPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [hasResponded, setHasResponded] = useState(false);
+  const [envelopeOpened, setEnvelopeOpened] = useState(false);
 
   useEffect(() => {
     const fetchInvitation = async () => {
