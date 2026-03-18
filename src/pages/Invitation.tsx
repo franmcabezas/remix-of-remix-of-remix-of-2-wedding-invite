@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Heart } from 'lucide-react';
+import EnvelopeOpener from '@/components/EnvelopeOpener';
 import { supabase, Invitation } from '@/lib/supabase';
 import WeddingHeader from '@/components/WeddingHeader';
 import VideoPlayer from '@/components/VideoPlayer';
@@ -26,6 +27,7 @@ const InvitationPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [hasResponded, setHasResponded] = useState(false);
+  const [envelopeOpened, setEnvelopeOpened] = useState(false);
 
   useEffect(() => {
     const fetchInvitation = async () => {
@@ -83,6 +85,8 @@ const InvitationPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Envelope animation */}
+      {!envelopeOpened && <EnvelopeOpener onOpen={() => setEnvelopeOpened(true)} />}
       {/* CSS-only floral decorations */}
       <FloralDecoration />
       
