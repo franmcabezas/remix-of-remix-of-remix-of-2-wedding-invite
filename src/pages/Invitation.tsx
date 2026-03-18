@@ -85,6 +85,8 @@ const InvitationPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Envelope animation */}
+      {!envelopeOpened && <EnvelopeOpener onOpen={() => setEnvelopeOpened(true)} />}
       {/* CSS-only floral decorations */}
       <FloralDecoration />
       
