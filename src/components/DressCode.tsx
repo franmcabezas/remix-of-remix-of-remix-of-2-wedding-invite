@@ -1,4 +1,6 @@
 import { Shirt } from 'lucide-react';
+import dressSketch from '@/assets/dress-sketch.png';
+import suitSketch from '@/assets/suit-sketch.png';
 
 const DressCode = () => {
   return (
@@ -16,6 +18,16 @@ const DressCode = () => {
         
         <div className="relative bg-card/40 backdrop-blur-sm rounded-2xl p-8 border border-gold-light/20 shadow-sm">
           <h3 className="font-display text-3xl text-foreground mb-5 italic">Formal</h3>
+          
+          {/* Dress and Suit illustrations */}
+          <div className="flex items-center justify-center gap-8 mb-6">
+            <div className="flex flex-col items-center gap-2">
+              <img src={dressSketch} alt="Vestido formal" className="w-24 h-28 object-contain opacity-70" />
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <img src={suitSketch} alt="Traje formal" className="w-24 h-28 object-contain opacity-70" />
+            </div>
+          </div>
           
           <div className="space-y-3 text-muted-foreground">
             <p className="text-sm font-sans leading-relaxed">
