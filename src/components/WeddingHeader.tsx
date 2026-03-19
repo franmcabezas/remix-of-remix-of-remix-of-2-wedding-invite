@@ -1,6 +1,6 @@
 import { Heart } from 'lucide-react';
-import florArriba from '/home/franmcabezas/remix-of-remix-of-remix-of-2-wedding-invite/src/assets/flor_arriba.png';
-import florAbajo from '/home/franmcabezas/remix-of-remix-of-remix-of-2-wedding-invite/src/assets/flor_abajo.png';
+import florArriba from '../assets/flor_arriba.png';
+import florAbajo from '../assets/flor_abajo.png';
 
 interface WeddingHeaderProps {
   coupleName?: string;
